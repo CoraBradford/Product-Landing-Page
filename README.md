@@ -6,7 +6,7 @@ This Product Landing Page showcases a fictional jewelry brand, "Lustre & Loom," 
 
 ## Code Samples
 
-Here are some key code snippets from the technical document that showcase its structure and styling:
+Here are some key code snippets from the product landing page that showcase its structure and styling:
 
 <!DOCTYPE html>
 <html lang="en">
