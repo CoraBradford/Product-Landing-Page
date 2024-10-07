@@ -1,0 +1,208 @@
+/* Styles for the Navigation Bar */
+#nav-bar {
+    position: fixed; 
+    top: 0;
+    left: 0; /* Align to the left */
+    width: 100%;               
+    background-color: #D6C8B8; 
+    z-index: 1000;           
+    display: flex;            
+    justify-content: center;   
+    padding: 10px 0;
+}
+
+/* General Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F9F7F4; 
+    color: #5C5148; 
+}
+
+/* Header */
+header {
+    background-color: #D6C8B8; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    max-height: 80px;
+    width: 80px;            
+    height: 80px;           
+    border-radius: 50%;     
+    object-fit: cover;      
+    display: block; 
+    margin: 0 auto;
+    position: fixed; 
+    left: 20px; 
+    top: 20px; 
+    z-index: 1100;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #5C5148; 
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: #A49584; 
+}
+
+/* Main Section */
+main {
+    padding: 40px;
+    background-color: #F9F7F4; 
+    margin-top: 120px; 
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#about h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    color: #5C5148; 
+    margin-bottom: 10px;
+}
+
+#about p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #A49584; 
+    margin-bottom: 20px;
+}
+
+#video {
+    text-align: center;
+}
+
+/* Products Section */
+#products {
+    padding: 40px;
+    background-color: #F9F7F4; 
+    color: #5C5148; 
+}
+
+#products h2 {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #A49584; 
+    display: inline-block;
+}
+
+/* Grid Layout for Products */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-item {
+    background-color: #FFFFFF; 
+    padding: 20px;
+    border: 1px solid #E7E4DC; 
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    width: 100%; 
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.normal-image,
+.hover-image {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border-radius: 5px; 
+}
+
+.hover-image {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.product-item:hover .hover-image {
+    opacity: 1;
+}
+
+.product-item:hover .normal-image {
+    opacity: 0;
+}
+
+.product-item h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #5C5148;
+}
+
+.product-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-item li {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    margin: 5px 0;
+    color: #A49584;
+}
+
+/* Price Styling */
+.price {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5C5148; 
+    margin-top: 10px;
+    text-align: right; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price {
+        text-align: center; 
+    }
+}
